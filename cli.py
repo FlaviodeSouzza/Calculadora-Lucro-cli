@@ -2,27 +2,37 @@
 Calculadora de Lucro Diario"""
 
 # Mensagem de boas-vindas
-print('Olá! Vamos calcular seu resultado diário')
+print('\nOlá! Vamos calcular seu resultado diário.')
+print('----' * 15)
 
-# Criação, captação e validação das variaveis para o calculo.
 
-# A esrutura de repetição junto do comando 'try' testa o tipo primitivo
-#  do valor inserido pelo usuário.
-while True:
-    try:
-        Rt = float(input('Qual o valor total de ENTRADAS no dia de hoje? '))
-        break
-# Se o valor inserido for diferente de float, o sistema denuncia o erro através do 'except'.
-# O laço de repetição atua enquanto o valor inserido não corresponda ao tipo primitivo indicado.
-    except ValueError:
-        print('Valor inválido!')
+def solicitar_valor(mensagem):
+    """ Validação das variaveis de calculo"""
+    while True:
+        try:
+            valor = float(input(mensagem))
+            if valor < 0 :
+                print('Digite um valor maior ou igual a zero.\n')
+                continue
+            return valor
+        except ValueError:
+            print('Valor inválido!')
+            print('----' * 15)
 
-while True:
-    try:
-        Ct = float(input('Qual o valor total de SAÍDAS no dia de hoje? '))
-        break
-    except ValueError:
-        print('Valor inválido!')
+
+#A esrutura de repetição junto do comando 'try' testa o tipo primitivo
+#do valor inserido pelo usuário.
+#Se o valor inserido for diferente de float, o sistema denuncia o erro através do 'except'.
+#O laço de repetição atua enquanto o valor inserido não corresponda ao tipo primitivo indicado.
+
+Rt = solicitar_valor('\nQual o valor total de \033[34mENTRADAS\033[0m no dia de hoje? R$ ')
+Ct = solicitar_valor('\nQual o valor total de \033[31mSAÍDAS\033[0m no dia de hoje? R$ ')
+
 
 # Apresentação do resultado final
-print(f'Seu resultado final no dia de hoje foi de R$ {Rt-Ct:.2f} ')
+# Se o saldo final for positivo a mensagem aparece em azul
+# Se o saldo final for negativo a mensagem aparece em vermelho
+if Rt - Ct >= 0:
+    print(f'\n\033[34mSeu resultado final no dia de hoje foi de R$ {Rt-Ct:.2f}!\033[0m\n')
+else:
+    print(f'\n\033[31mSeu resultado final no dia de hoje foi de R$ {Rt-Ct:.2f}!\033[0m\n')
