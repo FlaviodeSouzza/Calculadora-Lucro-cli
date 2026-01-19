@@ -1,24 +1,25 @@
-# Calculadora de Lucro (CLI)
+# Calculadora de Lucro (CLI em Python)
 Calculadora de Lucro desenvolvida em Python, como projeto inicial para o sistema LucroCerto.
 
+**Descrição**
 O programa calcula o lucro diário a partir dos dados inseridos pelo usuário via terminal.
+A aplicação deve mostrar ao final o valor referente ao lucro diário do usuário.
 
-**Quais dados o usuário deve inserir?**
-* Receita total (Rt);
-* Custos totais (Ct).
-
-**O que o programa deve calcular?**
-* Lucro = Rt - Ct
+**Funcionalidades**
+* Inserção de valores;
+* Validação dos dados;
+* Soma dos valores inseridos;
+* Apresentação do resultado.
 
 **Como executar?**
-* python cli.py
+```bash python cli.py **
 
-O programa deve mostrar ao final o valor referente ao lucro diário.
-
-**_Objetivo:_**
+**Objetivo do projeto:**
 * Praticar lógica de programação, entrada de dados e organização básica de código em Python.
 
-**Próximos passos**
-
-Posteriormente, vou evoluir o projeto gradualmente para atender motoristas de aplicativos e profissionais liberais, servindo como base para o projeto LucroCerto.
+**Lições aprendidas:**
+* Validação de entrada de dados com **_try/except_**;
+* Criação de funções reutilizáveis para reduzir duplicação de código;
+* Separação entre regras de negócio e tratamento de erros;
+* Boas práticas e escrita, organização e legibilidade de código.
 
