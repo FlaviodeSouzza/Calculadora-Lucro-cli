@@ -12,7 +12,7 @@ A aplicação deve mostrar ao final o valor referente ao lucro diário do usuár
 * Apresentação do resultado.
 
 **Como executar?**
-```bash python cli.py **
+* python cli.py 
 
 **Objetivo do projeto:**
 * Praticar lógica de programação, entrada de dados e organização básica de código em Python.
