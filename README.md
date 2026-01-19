@@ -8,7 +8,7 @@ A aplicação deve mostrar ao final o valor referente ao lucro diário do usuár
 **Funcionalidades**
 * Inserção de valores;
 * Validação dos dados;
-* Soma dos valores inseridos;
+* Calculo de lucro diario (entradas - saídas);
 * Apresentação do resultado.
 
 **Como executar?**
@@ -21,5 +21,5 @@ A aplicação deve mostrar ao final o valor referente ao lucro diário do usuár
 * Validação de entrada de dados com **_try/except_**;
 * Criação de funções reutilizáveis para reduzir duplicação de código;
 * Separação entre regras de negócio e tratamento de erros;
-* Boas práticas e escrita, organização e legibilidade de código.
+* Boas práticas de escrita, organização e legibilidade de código.
 
